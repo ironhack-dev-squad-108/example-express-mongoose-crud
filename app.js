@@ -30,6 +30,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+
+
 // Express View engine setup
 
 app.use(require('node-sass-middleware')({
@@ -50,9 +52,26 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.locals.title = 'Express - Generated with IronGenerator';
 
 
+// My own middleware
+app.use((req,res,next) => {
+  console.log('This is my 1st middleware')
+  if (req.url === '/') {
+    res.locals.activeClass = { home: true }
+  }
+  if (req.url === '/books') {
+    res.locals.activeClass = { books: true }
+  }
+  if (req.url === '/books/add') {
+    res.locals.activeClass = { booksAdd: true }
+  }
+
+  next()
+})
 
 const index = require('./routes/index');
 app.use('/', index);
+
+
 
 
 module.exports = app;

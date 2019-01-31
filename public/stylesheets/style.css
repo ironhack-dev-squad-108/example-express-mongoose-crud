@@ -3,6 +3,27 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00B7FF; }
+  color: red;
+  font-size: 21px; }
+
+a.active {
+  font-weight: bold;
+  color: #008bc2; }
+
+.edit-button {
+  margin-left: 5px;
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 4px;
+  background-color: grey;
+  border-radius: 6px; }
+
+.delete-button {
+  margin-left: 5px;
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 4px;
+  background-color: red;
+  border-radius: 6px; }
 
 /*# sourceMappingURL=style.css.map */

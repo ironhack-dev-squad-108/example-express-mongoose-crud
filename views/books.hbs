@@ -1,5 +1,8 @@
 <h1>BOOKS</h1>
 {{#each books}}
-    <p><a href="book/{{this._id}}">{{this.title}}</a></p>
-    {{!-- Never write `:bookId` in HBS --}}
+  <p>
+    <a href="book/{{this._id}}">{{this.title}}</a>
+    <a href="/books/edit?book_id={{this._id}}" class="edit-button">EDIT</a>
+    <a href="/books/delete/{{this._id}}" class="delete-button">DELETE</a>
+  </p>
 {{/each}}

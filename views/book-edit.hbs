@@ -1,0 +1,18 @@
+{{!-- views/book-edit.hbs --}}
+<form action="/books/edit?book_id={{book._id}}" method="post">
+  <label for="">Title:</label>
+  <input type="text" name="title" value="{{book.title}}">
+  <br>
+  <label for="">Author:</label>
+  <input type="text" name="author" value="{{book.author}}">
+  <br>
+  <label for="">Description:</label>
+  <textarea name="description" cols="30" rows="10">{{book.description}}</textarea>
+  <br>
+  <label for="">Rate:</label>
+  <input type="number" name="rating" value="{{book.rating}}">
+
+  {{!-- <input type="hidden" name="_id" value="{{book._id}}"> --}}
+  <br>
+  <button type="submit">EDIT</button>
+</form>

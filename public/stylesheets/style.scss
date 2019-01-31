@@ -1,8 +1,35 @@
+$blue: red;
+$n: 42px;
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: $blue;
+  font-size:  $n / 2;
+}
+
+a.active {
+  font-weight: bold;
+  color: rgb(0, 139, 194);
+}
+
+.edit-button {
+  margin-left:5px; 
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 4px;
+  background-color: grey;
+  border-radius: 6px;
+}
+
+.delete-button {
+  margin-left:5px; 
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 4px;
+  background-color: red;
+  border-radius: 6px;
 }
