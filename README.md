@@ -14,7 +14,7 @@ Add a `.env` file
 PORT=3000
 ```
 
-
+Now you can start your project
 ```sh
 npm run dev
 ```
