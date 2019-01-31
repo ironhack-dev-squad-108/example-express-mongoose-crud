@@ -16,5 +16,7 @@ PORT=3000
 
 Now you can start your project
 ```sh
+node bin/seeds.js
 npm run dev
 ```
+
